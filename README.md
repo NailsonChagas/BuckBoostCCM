@@ -315,3 +315,29 @@ om base na análise realizada, conclui-se que o diodo MBR360 atende aos requisit
 O projeto foi dimensionado para uma ondulação de tensão de saída de $\Delta V_o = 10%$, resultando em uma capacitância calculada de aproximadamente **3,75 µF** para o capacitor de saída. Como esse valor não é encontrado comercialmente, foi selecionado o valor comercial imediatamente superior e mais próximo, **3,9 µF**, garantindo que a ondulação real seja igual ou inferior à especificada no projeto.
 
 Quanto à tensão de operação, embora a tensão de saída do conversor seja de 20 V, recomenda-se a utilização de um capacitor com tensão nominal superior, de forma a proporcionar uma margem de segurança adequada. Assim, pode ser utilizado qualquer capacitor de **3,9 µF** com tensão nominal de **30 V ou superior**, sendo valores como **35 V** ou **50 V** igualmente adequados.
+
+Para analisar a ondulação de tensão de saída após a escolha do capacitor comercial, parte-se da expressão:
+
+$
+C = \frac{D}{\Delta V_o \cdot R \cdot f_s}
+$
+
+Isolando-se $\Delta V_o$, obtém-se:
+
+$
+\Delta V_o = \frac{D}{C \cdot R \cdot f_s}
+$
+
+Substituindo os valores do projeto:
+- $D$: 0,4
+- $C_{comercial}$: 3,9 µF
+- $R$: 26,67 $\Omega$
+- $f_s$: 40 kHz
+
+Podemos calcular o novo $\Delta V_o$:
+
+$
+\Delta V_o = \frac{0,4}{3,9 \times 10^{-6} \cdot 26,67 \cdot 40 \times 10^{3}} \approx 0,096 \approx 9,6\%
+$
+
+Portanto, a ondulação de tensão de saída após a escolha do capacitor comercial é aproximadamente 9,6\%, atendendo ao requisito de projeto de ondulação de tensão de saída maxima ser 10\%.
