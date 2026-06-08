@@ -24,6 +24,7 @@ Após a execução do script `projeto.mlx` utilizando os parâmetros especificad
 | Duty Cycle ($D$) | 40 % |
 | Resistência da carga ($R$) | 26,67 Ω |
 | Indutância ($L$) | 800 µH |
+| Indutância min CCM ($L_{min}$) | 120 µH |
 | Capacitância ($C$) | 3,75 µF |
 | Corrente média no indutor ($I_{L,med}$) | 1,25 A |
 | Corrente mínima no indutor ($I_{L,min}$) | 1,0625 A |
@@ -58,6 +59,7 @@ Com base nos resultados obtidos, os componentes devem suportar, no mínimo:
 | Parâmetro | Valor |
 |------------|--------|
 | Indutância | 800 µH |
+| Indutância min CCM    | >120 µH  |
 | Corrente de saturação | > 1,44 A |
 
 ### Capacitor de Saída
@@ -68,7 +70,7 @@ Com base nos resultados obtidos, os componentes devem suportar, no mínimo:
 | Tensão nominal | > 20 V |
 
 
-## Escolhendo componentes comerciais
+## Escolhendo componentes comerciais para o conversor CC-CC
 
 ### Análise do MOSFET: IRF530
 
@@ -341,3 +343,12 @@ $
 $
 
 Portanto, a ondulação de tensão de saída após a escolha do capacitor comercial é aproximadamente 9,6\%, atendendo ao requisito de projeto de ondulação de tensão de saída maxima ser 10\%.
+
+### Análise do Indutor
+A definição do indutor do conversor ainda depende de decisão do professor quanto à forma de implementação, podendo ser utilizado um componente comercial ou um indutor projetado e construído manualmente. Independentemente da escolha, o componente deve atender aos requisitos mínimos do projeto para garantir operação adequada em modo de condução contínua (CCM):
+
+| Parâmetro             | Valor    |
+| --------------------- | -------- |
+| Indutância            | 800 µH   |
+| Indutância min CCM    | >120 µH  |
+| Corrente de saturação | > 1,44 A |
