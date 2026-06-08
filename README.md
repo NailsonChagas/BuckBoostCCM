@@ -321,15 +321,15 @@ Quanto à tensão de operação, embora a tensão de saída do conversor seja de
 
 Para analisar a ondulação de tensão de saída após a escolha do capacitor comercial, parte-se da expressão:
 
-$
+$$
 C = \frac{D}{\Delta V_o \cdot R \cdot f_s}
-$
+$$
 
 Isolando-se $\Delta V_o$, obtém-se:
 
-$
+$$
 \Delta V_o = \frac{D}{C \cdot R \cdot f_s}
-$
+$$
 
 Substituindo os valores do projeto:
 - $D$: 0,4
@@ -339,9 +339,9 @@ Substituindo os valores do projeto:
 
 Podemos calcular o novo $\Delta V_o$:
 
-$
+$$
 \Delta V_o = \frac{0,4}{3,9 \times 10^{-6} \cdot 26,67 \cdot 40 \times 10^{3}} \approx 0,096 \approx 9,6\%
-$
+$$
 
 Portanto, a ondulação de tensão de saída após a escolha do capacitor comercial é aproximadamente 9,6\%, atendendo ao requisito de projeto de ondulação de tensão de saída maxima ser 10\%.
 
