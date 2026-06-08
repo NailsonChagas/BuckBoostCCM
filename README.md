@@ -13,6 +13,7 @@ Os parâmetros especificados para o projeto do conversor CC-CC Buck-Boost operan
 | Frequência de comutação ($f_s$) | 40 kHz |
 | Ondulação da corrente no indutor ($\Delta I_L$) | 30 % |
 | Rendimento | 90 % | 
+
 ---
 
 ## Resultados Obtidos
@@ -420,4 +421,4 @@ A participação relativa de cada elemento nas perdas totais é:
 - MOSFET: $$\frac{0,41}{1,35} \approx 30\%$$
 - Diodo: $$\frac{0,94}{1,35} \approx 70\%$$
 
-Os resultados indicam que o diodo de roda livre é o principal responsável pelas perdas do conversor, devido à sua queda de tensão direta relativamente elevada, mesmo sendo do tipo Schottky, enquanto o MOSFET contribui com uma parcela menor, já que suas perdas de condução e comutação são reduzidas na frequência de 40 kHz. Com isso, o rendimento estimado de aproximadamente 91,7% é coerente para um conversor Buck-Boost em CCM. Deve-se considerar que as perdas reais podem ser um pouco maiores, pois não foram incluídas perdas no indutor devido à resistência do enrolamento, perdas no capacitor associadas ao ESR e perdas no circuito de acionamento do gate do MOSFET. Dessa forma, o conversor apresenta desempenho global adequado, com eficiência próxima de 92%, atendendo ao requisito mínimo especificado de 90% de eficiência, o que confirma a viabilidade do projeto dentro das condições estabelecidas.
+Os resultados indicam que o diodo de roda livre é o principal responsável pelas perdas do conversor, devido à sua queda de tensão direta relativamente elevada, mesmo sendo do tipo Schottky, enquanto o MOSFET contribui com uma parcela menor, já que suas perdas de condução e comutação são reduzidas na frequência de 40 kHz. Com isso, o rendimento estimado de aproximadamente **91,7%** é coerente para um conversor Buck-Boost em CCM. Deve-se considerar que as perdas reais podem ser um pouco maiores, pois não foram incluídas perdas no indutor devido à resistência do enrolamento, perdas no capacitor associadas ao ESR e perdas no circuito de acionamento do gate do MOSFET. Dessa forma, o conversor apresenta desempenho global adequado, com eficiência próxima de **92%**, atendendo ao requisito mínimo especificado de **90%** de eficiência, o que confirma a viabilidade do projeto dentro das condições estabelecidas.
