@@ -119,7 +119,7 @@ Observa-se que a tensão máxima exigida pelo conversor é de 50 V, enquanto o I
 Além disso, os tempos de comutação do IRF530 são adequados para a frequência de operação do conversor. Considerando a frequência de chaveamento especificada de:
 
 $$
-f_s = 40,kHz
+f_s = 40\,kHz
 $$
 
 o período de comutação é:
