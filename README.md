@@ -69,6 +69,7 @@ Com base nos resultados obtidos, os componentes devem suportar, no mínimo:
 | Capacitância | 3,75 µF |
 | Tensão nominal | > 20 V |
 
+---
 
 ## Escolhendo componentes comerciais para o conversor CC-CC
 
@@ -311,7 +312,7 @@ P_D \approx 0,65 \cdot 1,44
 \approx 0,94\,W
 $$
 
-om base na análise realizada, conclui-se que o diodo MBR360 atende aos requisitos elétricos do conversor Buck-Boost projetado. O dispositivo suporta tensões e correntes superiores às exigidas pelo circuito, fornecendo margens adequadas de segurança para a operação. Além disso, sua baixa queda de tensão direta resulta em menores perdas por condução, contribuindo para o aumento da eficiência energética do conversor. Por utilizar tecnologia Schottky, o componente também apresenta recuperação reversa extremamente rápida e reduzidas perdas de comutação, características particularmente importantes em aplicações chaveadas. Dessa forma, o MBR360 é uma escolha adequada para atuar como diodo de roda livre do conversor, oferecendo bom desempenho, elevada eficiência e operação confiável na frequência de chaveamento de 40 kHz.
+Com base na análise realizada, conclui-se que o diodo MBR360 atende aos requisitos elétricos do conversor Buck-Boost projetado. O dispositivo suporta tensões e correntes superiores às exigidas pelo circuito, fornecendo margens adequadas de segurança para a operação. Além disso, sua baixa queda de tensão direta resulta em menores perdas por condução, contribuindo para o aumento da eficiência energética do conversor. Por utilizar tecnologia Schottky, o componente também apresenta recuperação reversa extremamente rápida e reduzidas perdas de comutação, características particularmente importantes em aplicações chaveadas. Dessa forma, o MBR360 é uma escolha adequada para atuar como diodo de roda livre do conversor, oferecendo bom desempenho, elevada eficiência e operação confiável na frequência de chaveamento de 40 kHz.
 
 ### Análise do Capacitor de Saída: 3,9 µF >30V
 O projeto foi dimensionado para uma ondulação de tensão de saída de $\Delta V_o = 10%$, resultando em uma capacitância calculada de aproximadamente **3,75 µF** para o capacitor de saída. Como esse valor não é encontrado comercialmente, foi selecionado o valor comercial imediatamente superior e mais próximo, **3,9 µF**, garantindo que a ondulação real seja igual ou inferior à especificada no projeto.
@@ -352,6 +353,8 @@ A definição do indutor do conversor ainda depende de decisão do professor qua
 | Indutância            | 800 µH   |
 | Indutância min CCM    | >120 µH  |
 | Corrente de saturação | > 1,44 A |
+
+---
 
 ## Análise das Perdas no Conversor CC-CC
 
