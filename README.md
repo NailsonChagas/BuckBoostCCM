@@ -352,3 +352,79 @@ A definição do indutor do conversor ainda depende de decisão do professor qua
 | Indutância            | 800 µH   |
 | Indutância min CCM    | >120 µH  |
 | Corrente de saturação | > 1,44 A |
+
+## Análise das Perdas no Conversor CC-CC
+
+A análise de perdas do conversor considera principalmente os elementos semicondutores, uma vez que representam as maiores contribuições para a dissipação de potência no estágio de chaveamento.
+
+### 1. Perdas na chave (MOSFET IRF530)
+
+Conforme análise anterior, a potência total dissipada no MOSFET é:
+
+$$
+P_{MOSFET} = P_{cond} + P_{sw} \approx 0,33 + 0,084 = 0,41\,W
+$$
+
+### 2. Perdas no diodo de roda livre (MBR360)
+
+A potência dissipada no diodo foi estimada pela queda de tensão direta:
+
+$$
+P_D \approx V_F \cdot I_D \approx 0,65 \cdot 1,44 = 0,94\,W
+$$
+
+### 3. Perdas totais do conversor
+
+Considerando apenas os semicondutores principais:
+
+$$
+P_{perdas} = P_{MOSFET} + P_D = 0,41 + 0,94 = 1,35\,W
+$$
+
+### 4. Potência de saída e potência de entrada
+
+A potência útil especificada no projeto é:
+
+$$
+P_o = 15\,W
+$$
+
+Logo, a potência de entrada estimada do conversor é:
+
+$$
+P_{in} = P_o + P_{perdas}
+$$
+
+$$
+P_{in} = 15 + 1,35 = 16,35\,W
+$$
+
+### 5. Rendimento do conversor
+
+O rendimento pode ser calculado como:
+
+$$
+\eta = \frac{P_o}{P_{in}}
+$$
+
+$$
+\eta = \frac{15}{16,35} \approx 0,917 \approx 91,7\%
+$$
+
+### 6. Distribuição das perdas
+
+A participação relativa de cada elemento nas perdas totais é:
+
+#### MOSFET
+
+$$
+\frac{0,41}{1,35} \approx 30\%
+$$
+
+#### Diodo
+
+$$
+\frac{0,94}{1,35} \approx 70\%
+$$
+
+Os resultados indicam que o diodo de roda livre é o principal responsável pelas perdas do conversor, devido à sua queda de tensão direta relativamente elevada, mesmo sendo do tipo Schottky, enquanto o MOSFET contribui com uma parcela menor, já que suas perdas de condução e comutação são reduzidas na frequência de 40 kHz. Com isso, o rendimento estimado de aproximadamente 91,7% é coerente para um conversor Buck-Boost em CCM utilizando diodo convencional. Deve-se considerar que as perdas reais podem ser um pouco maiores, pois não foram incluídas perdas no indutor devido à resistência do enrolamento, perdas no capacitor associadas ao ESR, perdas no circuito de acionamento do gate do MOSFET e efeitos dinâmicos não ideais como overshoot, dead time e recuperação reversa residual. Dessa forma, o conversor apresenta desempenho global adequado, com eficiência próxima de 92%, sendo limitado principalmente pelas perdas no diodo de roda livre.
