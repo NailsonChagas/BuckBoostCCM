@@ -197,7 +197,7 @@ P_{sw}=\frac{1}{2}\cdot50\cdot1,44\cdot(34+24)\times10^{-9}\cdot40000
 $$
 
 $$
-P_{sw}\approx0,084\,W\approx84\,mW
+P_{sw}\approx0,0834\,W\approx83,4\,mW
 $$
 
 As perdas por condução podem ser estimadas utilizando a resistência dreno-fonte em condução do dispositivo. De acordo com o datasheet, o IRF530 apresenta:
@@ -224,7 +224,7 @@ P_{tot}=P_{cond}+P_{sw}
 $$
 
 $$
-P_{tot}=0,33+0,084\approx0,41\,W
+P_{tot}=0,33+0,0834\approx0,41\,W
 $$
 
 Observa-se que as perdas por condução são predominantes, representando aproximadamente:
@@ -236,7 +236,7 @@ $$
 das perdas totais, enquanto as perdas de comutação correspondem a cerca de:
 
 $$
-\frac{0,084}{0,41}\times100\approx20\%
+\frac{0,0834}{0,41}\times100\approx20\%
 $$
 
 Esse resultado demonstra que, para a frequência de operação de 40 kHz, os reduzidos tempos de subida e descida do IRF530 limitam as perdas de chaveamento a valores relativamente baixos. Assim, a maior parcela da potência dissipada está associada à resistência de condução do dispositivo.
@@ -357,9 +357,9 @@ A definição do indutor do conversor ainda depende de decisão do professor qua
 
 ---
 
-## Análise das Perdas no Conversor CC-CC
+## Análise das Perdas no Conversor CC-CC Desconsiderando o Circuito de Acionamento
 
-A análise de perdas do conversor considera principalmente os elementos semicondutores, uma vez que representam as maiores contribuições para a dissipação de potência no estágio de chaveamento.
+A análise de perdas do conversor considera principalmente os elementos semicondutores, uma vez que representam as maiores contribuições para a dissipação de potência no estágio de chaveamento. Nesta análise, assume-se que o circuito de acionamento (driver) é ideal, isto é, não introduz atrasos significativos nos tempos de comutação nem contribui com perdas adicionais relevantes. Dessa forma, são desconsiderados os efeitos associados ao atraso de propagação e às limitações do circuito de acionamento, sendo as perdas avaliadas apenas em função das características dos dispositivos semicondutores e das condições de operação do conversor.
 
 ### 1. Perdas na chave (MOSFET IRF530)
 
